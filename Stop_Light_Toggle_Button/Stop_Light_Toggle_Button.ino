@@ -1,11 +1,13 @@
 // constants won't change. They're used here to set pin numbers:
 const int buttonPin = 2;     // the number of the pushbutton pin
 const int redLedPin =  13;      // the number of the red LED pin
+const int yellowLedPin =  12;      // the number of the yellow LED pin
+const int greenLedPin =  11;      // the number of the green LED pin
 
 // variables will change:
 int buttonState;         // variable for reading the pushbutton status
 int lastButtonState = LOW;         // variable for reading the pushbutton status
-int lightState = HIGH;
+int lightState = 0;
 
 // the following variables are unsigned longs because the time, measured in
 // milliseconds, will quickly become a bigger number than can be stored in an int.
@@ -15,6 +17,8 @@ unsigned long debounceDelay = 50;    // the debounce time; increase if the outpu
 void setup() {
   // initialize the LED pins as an outputs:
   pinMode(redLedPin, OUTPUT);
+  pinMode(yellowLedPin, OUTPUT);
+  pinMode(greenLedPin, OUTPUT);
   // initialize the pushbutton pin as an input:
   pinMode(buttonPin, INPUT);
 }
@@ -42,7 +46,7 @@ void loop() {
     if (reading != buttonState) {
       buttonState = reading;
       if (reading == HIGH) {
-        lightState = !lightState;
+        lightState = ++lightState%3;
       }
     }
   }
