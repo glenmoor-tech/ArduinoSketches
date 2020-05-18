@@ -1,4 +1,5 @@
 /*
+  ==: the comparison operator
   &&: the and logical operator
   ||: the or logical operator
   !: the not logical operator
@@ -24,6 +25,27 @@ int main() {
     bool b = false;
 
     cout << "a is true and b is false:\n";
+
+    cout << "a == a: ";
+    if (a == a) {
+        cout << "true\n";
+    }
+
+    cout << "b == a: ";
+    if (b == a) {
+        cout << "true\n";
+    }
+    else {
+        cout << "false\n";
+    }
+
+    cout << "3 == 10 - 7: ";
+    if (3 == 10 - 7) {
+        cout << "true\n";
+    }
+    else {
+        cout << "false\n";
+    }
 
     cout << "b && b: ";
     if (b && b) {
