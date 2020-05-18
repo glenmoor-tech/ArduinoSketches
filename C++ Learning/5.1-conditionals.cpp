@@ -18,7 +18,7 @@ int main() {
     cout << "Heads\n";
   
   }
-	if (coin == 1) {
+	else if (coin == 1) { // This is checked if the original if statement is false
 	
     cout << "Tails\n";
   

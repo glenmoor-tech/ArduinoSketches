@@ -18,7 +18,8 @@ int main() {
     cout << "Heads\n";
   
   }
-	if (coin == 1) {
+	else { // This is ran if the original if statement is false
+         // but not ran if the original if statement was true
 	
     cout << "Tails\n";
   
