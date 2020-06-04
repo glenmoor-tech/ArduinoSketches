@@ -1,7 +1,7 @@
 // constants won't change. They're used here to set pin numbers:
-const int redLedPin =  11;      // the number of the red LED pin
+const int redLedPin =  9;      // the number of the red LED pin
 const int greenLedPin =  10;      // the number of the yellow LED pin
-const int blueLedPin =  9;      // the number of the green LED pin
+const int blueLedPin =  11;      // the number of the green LED pin
 int redValue = 0;
 int greenValue = 0;
 int blueValue = 0;
